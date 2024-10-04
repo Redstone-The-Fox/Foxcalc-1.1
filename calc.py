@@ -19,7 +19,10 @@ calcu = ""
 def go():
     global calcu
     #print(f"[Log]: Button = Clicked")
-    exec(f'print("Your answer is: ", end=""); print({calcu})')
+    try:
+        exec(f'print("Your answer is: ", end=""); print({calcu})')
+    except Exception:
+        print('Invalid Operation')
 
 def ac():
     global calcu
